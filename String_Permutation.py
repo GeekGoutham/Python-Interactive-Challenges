@@ -15,13 +15,13 @@ def string_permutations(String1, String2):          # Algorithm has 3 for loops 
     return True
 
 
-def string_permutations_v2(String1, String2):          #Single for loop -- better
+def string_permutations_v2(String1, String2):          #Single for loop -- better O(n)
     for char in String1:
         if char not in String2:
             return False
     return True
 
-def string_permutations_v3(String1, String2):       # sort uses merge sort with O(log n) -- best performance
+def string_permutations_v3(String1, String2):       # sort uses merge sort with O(n log n) -- Bad compared to O(n)
     sort_string1 = sorted(String1)
     sort_string2 = sorted(String2)
     if sort_string1 == sort_string2:
