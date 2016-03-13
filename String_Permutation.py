@@ -15,7 +15,9 @@ def string_permutations(String1, String2):          # Algorithm has 3 for loops 
     return True
 
 
-def string_permutations_v2(String1, String2):          #Single for loop -- better O(n)
+def string_permutations_v2(String1, String2):
+    if len(String1) != len(String2):
+        return False                                            #Single for loop -- better O(n)
     for char in String1:
         if char not in String2:
             return False
@@ -32,4 +34,4 @@ def string_permutations_v3(String1, String2):       # sort uses merge sort with 
 
 
 if __name__ == "__main__":
-    print(string_permutations_v3("act","cAt"))
+    print(string_permutations_v2("act","cAt"))
