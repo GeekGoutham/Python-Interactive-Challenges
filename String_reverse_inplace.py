@@ -12,8 +12,25 @@ def string_reverse(charlist):
         far_current -= 1
     print(charlist)
 
+def string_reverse_v2(string1):  #Pythonic way to do with strings  (Not in-place)
+    if string1 == None:
+        print("No string to reverse")
+        return False
+    else:
+        print(string1[::-1])
+
+def string_reverse_v3(string1):         #Using reversed method -- (Not in-place)
+    if string1 == None:
+        print("No string to return")
+    else:
+        rev = reversed(string1)
+        print("".join(rev))
+
 
 if __name__ == "__main__":
     charlist = ['v','i','g','n','e','s','h']
     print(charlist)
     string_reverse(charlist)
+    print("=====================")
+    string_reverse_v2("Vignesh")
+    string_reverse_v3("vignesh")
