@@ -7,9 +7,7 @@ def string_reverse(charlist):
     current = 0
     far_current = len(charlist)-1
     while(current != far_current):
-        temp = charlist[current]
-        charlist[current] = charlist[far_current]
-        charlist[far_current] = temp
+        charlist[current],charlist[far_current] = charlist[far_current], charlist[current]
         current += 1
         far_current -= 1
     print(charlist)
