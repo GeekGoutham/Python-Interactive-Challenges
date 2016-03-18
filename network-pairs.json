@@ -1,0 +1,44 @@
+{
+
+	"network_pair": [{
+		"source": {
+			"file_path": "/tmp/events",
+			"backup_file_path": "/sdr/events_backup",
+			"poll_interval_seconds": "5",
+			"clean_backup_delta_days": "3"
+		},
+		"destination": [{
+			"port": "22",
+			"file_path": "/sdr/incoming",
+			"user": "root",
+			"password": "esbc@204"
+
+		}, {
+			"port": "22",
+			"file_path": "/sdr/incoming/dest2",
+			"user": "root",
+			"password": "esbc@204"
+		}]
+
+	}, {
+
+		"source": {
+			"file_path": "/tmp/events",
+			"backup_file_path": "/sdr/events_backup",
+			"poll_interval_seconds": "5",
+			"clean_backup_delta_days": "3"
+		},
+		"destination": [{
+			"port": "22",
+			"file_path": "/sdr/incoming",
+			"user": "root",
+			"password": "esbc@204"
+
+		}, {
+			"port": "22",
+			"file_path": "/sdr/incoming/dest2",
+			"user": "root",
+			"password": "esbc@204"
+		}]
+	}]
+}
