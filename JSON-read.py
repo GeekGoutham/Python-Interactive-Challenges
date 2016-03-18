@@ -7,4 +7,4 @@ for line in jsonfile:
     jsondata += line
 parsed_data = json.loads(jsondata)
 
-print(parsed_data['network_pair'][0]['source'])
+print(parsed_data['network_pair'][1]['source']['file_path'])
