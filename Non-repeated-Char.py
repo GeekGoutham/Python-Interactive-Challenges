@@ -1,7 +1,7 @@
 #Author = Vignesh Goutham
 
-def getNonRepeatChar(string1):              #Both algorithms have the same time complexity of O(n), but the lower v2 looks clean and might be having lesser space complexity
-    chardict = {}
+def getNonRepeatChar(string1):              #The bottom algorithm is more good
+    chardict = {}                           #Reading and witing to dict is O(n) -- so algorithm might be O(n^2)
     for ch in string1:
         if ch in chardict.keys():
             chardict[ch] += 1
