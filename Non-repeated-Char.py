@@ -17,7 +17,7 @@ def getNonRepeatChar(string1):              #The bottom algorithm is more good
 
 
 def getNonRepeatChar_v2(string1):
-    for ch in string1:
+    for ch in string1:                              #Count in python is also O(n) --
         count = string1.count(ch)
         if count == 1:
             print(ch + " is the non-repeating first char")
