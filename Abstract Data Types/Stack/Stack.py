@@ -15,3 +15,12 @@ class Stack:
 
     def isEmpty(self):
         return (len(self.stack) == 0)
+
+    def printStack(self):
+        print(self.stack)
+
+if __name__ == "__main__":
+    s = Stack()
+    s.push("VG")
+    s.push("Goutham")
+    print(s.pop())
