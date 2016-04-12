@@ -5,18 +5,18 @@ class Stack:
         self.stack = []
 
     def push(self,element):
-        self.stack.append(element)
+        self.stack.append(element)              #O(1)
 
     def pop(self):
-        return self.stack.pop()
+        return self.stack.pop()                 #O(1)
 
     def peek(self):
-        return self.stack[len(self.stack)-1]
+        return self.stack[len(self.stack)-1]    #O(n)
 
     def isEmpty(self):
-        return (len(self.stack) == 0)
+        return (len(self.stack) == 0)           #O(n)
 
-    def printStack(self):
+    def printStack(self):                       #O(n)
         print(self.stack)
 
 
