@@ -19,8 +19,4 @@ class Stack:
     def printStack(self):
         print(self.stack)
 
-if __name__ == "__main__":
-    s = Stack()
-    s.push("VG")
-    s.push("Goutham")
-    print(s.pop())
+
