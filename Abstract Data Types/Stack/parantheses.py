@@ -4,10 +4,13 @@ import Stack
 def eval_parantheses(StringSymbol):
     mismatch = False
     for sym in StringSymbol:
-        if sym == "(":
+        if sym in "({[":
             s.push(sym)
-        elif sym == ")" and s.isEmpty() == False:
-            s.pop()
+        elif sym in ")}]" and s.isEmpty() == False:
+            top = s.pop()
+            match_res = matches(sym,top)
+            if not match_res:
+                mismatch = True
         else:
             mismatch = True
     if (s.isEmpty() == False):
@@ -16,9 +19,12 @@ def eval_parantheses(StringSymbol):
     return (not mismatch)
 
 
-
+def matches(sym,top):
+    opens = "({["
+    closers = ")}]"
+    return opens.index(top) == closers.index(sym)
 
 if __name__ == "__main__":
     s = Stack.Stack()
-    res = eval_parantheses("((")
+    res = eval_parantheses("(({}))")
     print(res)
