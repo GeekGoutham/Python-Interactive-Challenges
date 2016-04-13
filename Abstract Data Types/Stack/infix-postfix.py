@@ -28,4 +28,4 @@ def infixtopostfix(expr):
     return str_out
 
 if __name__ == "__main__":
-    print(infixtopostfix("A*B+C*D"))
+    print(infixtopostfix("A+B*C"))
