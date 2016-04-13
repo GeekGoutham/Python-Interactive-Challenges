@@ -1,7 +1,7 @@
 #Author = Vignesh Goutham
 import Stack
 
-def infixtopostfix(expr):
+def infixtopostfix(expr):               #Can add implmentaton to check if the braces are balanced
     expr_stack = Stack.Stack()
     str_out = ""
     prec = {"*":3,"/":3,"+":2,"-":2,"(":1,")":1}
