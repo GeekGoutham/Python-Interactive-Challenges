@@ -1,8 +1,9 @@
 #Author = Vignesh Goutham
 import Stack
 
-def infixtopostfix(expr):               #Can add implmentaton to check if the braces are balanced
+def infixtopostfix(expr_raw):               #Can add implmentaton to check if the braces are balanced
     expr_stack = Stack.Stack()
+    expr = expr_raw.split(" ")
     str_out = ""
     prec = {"*":3,"/":3,"+":2,"-":2,"(":1,")":1}
     out_list = list()
@@ -28,4 +29,4 @@ def infixtopostfix(expr):               #Can add implmentaton to check if the br
     return str_out
 
 if __name__ == "__main__":
-    print(infixtopostfix("A+B*C"))
+    print(infixtopostfix("A + B * C"))
