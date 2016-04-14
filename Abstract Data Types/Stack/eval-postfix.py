@@ -1,7 +1,8 @@
 #Author = Vignesh Goutham
 import Stack
 
-def evaluate_postfix(expr):
+def evaluate_postfix(expr_raw):             #Postfix expressions always have spaces since that is the way two digits can be identified
+    expr = expr_raw.split(" ")
     s = Stack.Stack()
     for ex in expr:
         if ex in "0123456789":
@@ -27,4 +28,4 @@ def evalMath(a,b,ex):
 
 
 if __name__ == "__main__":
-    print(evaluate_postfix("3232*+"))
+    print(evaluate_postfix("3 23 2 * +"))
