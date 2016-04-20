@@ -8,7 +8,7 @@ def infixtopostfix(expr_raw):               #Can add implmentaton to check if th
     prec = {"*":3,"/":3,"+":2,"-":2,"(":1,")":1}
     out_list = list()
     for ch in expr:
-        if ch in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or ch in "0123456789":
+        if ch in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or ch.isdigit():
             out_list.append(ch)
         elif ch == "(":
             expr_stack.push(ch)
@@ -25,8 +25,9 @@ def infixtopostfix(expr_raw):               #Can add implmentaton to check if th
     while (not expr_stack.isEmpty()):
         out_list.append(expr_stack.pop())
     for chi in out_list:
-        str_out += str(chi)
+        str_out += " " + str(chi)
     return str_out
 
 if __name__ == "__main__":
-    print(infixtopostfix("A + B * C"))
+    print(infixtopostfix("10 + 3 * 5 / ( 16 - 4 )"))
+    #A + B * C

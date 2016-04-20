@@ -5,7 +5,7 @@ def evaluate_postfix(expr_raw):             #Postfix expressions always have spa
     expr = expr_raw.split(" ")
     s = Stack.Stack()
     for ex in expr:
-        if ex in "0123456789":
+        if ex.isdigit():
             s.push(ex)
         elif ex in "*/+-":
             b = int(s.pop())
@@ -28,4 +28,4 @@ def evalMath(a,b,ex):
 
 
 if __name__ == "__main__":
-    print(evaluate_postfix("3 23 2 * +"))
+    print(evaluate_postfix("3 20 2 * +"))
