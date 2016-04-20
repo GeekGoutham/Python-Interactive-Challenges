@@ -18,7 +18,7 @@ def infixtopostfix(expr_raw):               #Can add implmentaton to check if th
                 out_list.append(pop_token)
                 pop_token = expr_stack.pop()
         else:
-            while (not expr_stack.isEmpty()) and (prec[ch] < prec[expr_stack.peek()]):
+            while (not expr_stack.isEmpty()) and (prec[ch] <= prec[expr_stack.peek()]):
                 popped = expr_stack.pop()
                 out_list.append(popped)
             expr_stack.push(ch)
